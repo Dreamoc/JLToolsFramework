@@ -24,9 +24,9 @@ Pod::Spec.new do |spec|
                    DESC
 
   spec.homepage     = "https://github.com/Dreamoc/JLToolsFramework"
-  spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "fengjinlin" => "461775260@qq.com" }
   spec.source       = { :git => "https://github.com/Dreamoc/JLToolsFramework.git", :tag => "#{spec.version}" }
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "JLToolsFramework/JLToolsFramework.h"
+  spec.exclude_files = "JLToolsFramework/Exclude"
 end
