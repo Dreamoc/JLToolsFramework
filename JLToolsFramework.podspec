@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "JLToolsFramework"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "我的描述我的描述我的描述我的描述我的描述我的描述我的描述我的描述"
 
   spec.description  = <<-DESC
