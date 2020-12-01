@@ -17,10 +17,10 @@ Pod::Spec.new do |spec|
 
   spec.name         = "JLToolsFramework"
   spec.version      = "1.0.0"
-  spec.summary      = "A short description of JLToolsFramework."
+  spec.summary      = "我的描述我的描述我的描述我的描述我的描述我的描述我的描述我的描述"
 
   spec.description  = <<-DESC
-  描述一下
+  描述一下描述一下描述一下描述一下描述一下描述一下描述一下描述一下描述一下描述一下描述一下
                    DESC
 
   spec.homepage     = "https://github.com/Dreamoc/JLToolsFramework"
