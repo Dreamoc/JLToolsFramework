@@ -14,6 +14,8 @@
 		6D8D38662575F1BC00DB0EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D8D38652575F1BC00DB0EA1 /* Assets.xcassets */; };
 		6D8D38692575F1BC00DB0EA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D8D38672575F1BC00DB0EA1 /* LaunchScreen.storyboard */; };
 		6D8D386C2575F1BC00DB0EA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D386B2575F1BC00DB0EA1 /* main.m */; };
+		6DF0787125778A32005185AD /* JLMoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0787025778A32005185AD /* JLMoveViewController.m */; };
+		6DF0787525779917005185AD /* JLBezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0787425779917005185AD /* JLBezierViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		6D8D38682575F1BC00DB0EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D8D386A2575F1BC00DB0EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D8D386B2575F1BC00DB0EA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6DF0786F25778A32005185AD /* JLMoveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLMoveViewController.h; sourceTree = "<group>"; };
+		6DF0787025778A32005185AD /* JLMoveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLMoveViewController.m; sourceTree = "<group>"; };
+		6DF0787325779917005185AD /* JLBezierViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLBezierViewController.h; sourceTree = "<group>"; };
+		6DF0787425779917005185AD /* JLBezierViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLBezierViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,10 @@
 				6D8D38672575F1BC00DB0EA1 /* LaunchScreen.storyboard */,
 				6D8D386A2575F1BC00DB0EA1 /* Info.plist */,
 				6D8D386B2575F1BC00DB0EA1 /* main.m */,
+				6DF0786F25778A32005185AD /* JLMoveViewController.h */,
+				6DF0787025778A32005185AD /* JLMoveViewController.m */,
+				6DF0787325779917005185AD /* JLBezierViewController.h */,
+				6DF0787425779917005185AD /* JLBezierViewController.m */,
 			);
 			path = JLToolsFramework;
 			sourceTree = "<group>";
@@ -146,9 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D8D38612575F1BC00DB0EA1 /* ViewController.m in Sources */,
+				6DF0787525779917005185AD /* JLBezierViewController.m in Sources */,
 				6D8D385B2575F1BC00DB0EA1 /* AppDelegate.m in Sources */,
 				6D8D386C2575F1BC00DB0EA1 /* main.m in Sources */,
 				6D8D385E2575F1BC00DB0EA1 /* SceneDelegate.m in Sources */,
+				6DF0787125778A32005185AD /* JLMoveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

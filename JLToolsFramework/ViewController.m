@@ -6,17 +6,66 @@
 //
 
 #import "ViewController.h"
+#import "JLMoveViewController.h"
+#import "JLBezierViewController.h"
 
-@interface ViewController ()
-
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) UITableView * myTableView;
+@property (nonatomic, strong) NSArray * dataArray;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupUI];
+    [self loadData];
 }
 
+- (void)setupUI {
+    self.myTableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.myTableView.backgroundColor = [UIColor whiteColor];
+    self.myTableView.delegate = self;
+    self.myTableView.dataSource = self;
+    self.myTableView.tableFooterView = [UIView new];
+    self.myTableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    [self.view addSubview:self.myTableView];
+}
+
+#pragma mark TableViewDelegate TableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView  {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *Identifier = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Identifier];
+    }
+    Class class = self.dataArray[indexPath.row];
+    cell.textLabel.text = NSStringFromClass(class);
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Class class = self.dataArray[indexPath.row];
+    UIViewController  * vc = [[class alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)loadData {
+    self.dataArray = @[[JLMoveViewController class],[JLBezierViewController class]];
+    [self.myTableView reloadData];
+}
 
 @end
