@@ -16,6 +16,7 @@
 		6D8D386C2575F1BC00DB0EA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D386B2575F1BC00DB0EA1 /* main.m */; };
 		6DF0787125778A32005185AD /* JLMoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0787025778A32005185AD /* JLMoveViewController.m */; };
 		6DF0787525779917005185AD /* JLBezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0787425779917005185AD /* JLBezierViewController.m */; };
+		6DFA4E0C257A1E5000D30446 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFA4E0B257A1E5000D30446 /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		6DF0787025778A32005185AD /* JLMoveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLMoveViewController.m; sourceTree = "<group>"; };
 		6DF0787325779917005185AD /* JLBezierViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLBezierViewController.h; sourceTree = "<group>"; };
 		6DF0787425779917005185AD /* JLBezierViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLBezierViewController.m; sourceTree = "<group>"; };
+		6DFA4E0A257A1E5000D30446 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		6DFA4E0B257A1E5000D30446 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 		6D8D38582575F1BC00DB0EA1 /* JLToolsFramework */ = {
 			isa = PBXGroup;
 			children = (
+				6DFA4E0A257A1E5000D30446 /* UIView+Extension.h */,
+				6DFA4E0B257A1E5000D30446 /* UIView+Extension.m */,
 				6D8D38592575F1BC00DB0EA1 /* AppDelegate.h */,
 				6D8D385A2575F1BC00DB0EA1 /* AppDelegate.m */,
 				6D8D385C2575F1BC00DB0EA1 /* SceneDelegate.h */,
@@ -158,6 +163,7 @@
 				6D8D38612575F1BC00DB0EA1 /* ViewController.m in Sources */,
 				6DF0787525779917005185AD /* JLBezierViewController.m in Sources */,
 				6D8D385B2575F1BC00DB0EA1 /* AppDelegate.m in Sources */,
+				6DFA4E0C257A1E5000D30446 /* UIView+Extension.m in Sources */,
 				6D8D386C2575F1BC00DB0EA1 /* main.m in Sources */,
 				6D8D385E2575F1BC00DB0EA1 /* SceneDelegate.m in Sources */,
 				6DF0787125778A32005185AD /* JLMoveViewController.m in Sources */,
