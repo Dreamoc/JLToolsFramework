@@ -8,6 +8,7 @@
 #import "JLBezierViewController.h"
 
 @interface JLBezierViewController ()
+@property (nonatomic, nullable, strong) UILabel * unlock;
 
 @end
 
@@ -31,8 +32,10 @@
     [self drawCurveLine];
     [self drawQuadCurveLine];
 
-    MyBezierView * view= [[MyBezierView alloc]initWithFrame:CGRectMake(100, 200, 200, 200)];
-    [self.view addSubview:view];
+    [self jianbian];
+//
+//    MyBezierView * view= [[MyBezierView alloc]initWithFrame:CGRectMake(100, 200, 200, 200)];
+//    [self.view addSubview:view];
 //    NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(run) userInfo:nil repeats:YES];
 //    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
@@ -169,7 +172,39 @@
     [self.view.layer addSublayer:shape];
 }
 
+- (void)jianbian {
+    self.view.backgroundColor = [UIColor grayColor];
+    CAGradientLayer *gra = [CAGradientLayer layer];
+    [self.view.layer addSublayer:gra];
+    gra.frame = CGRectMake(100, 200, 150, 100);
+    gra.colors = @[
+        (__bridge id)[UIColor blackColor].CGColor,
+        (__bridge id)[UIColor whiteColor].CGColor,
+        (__bridge id)[UIColor blackColor].CGColor,
+                    ];
+    gra.locations = @[@0.25,@0.5,@0.75];
+    gra.startPoint = CGPointMake(0, 0.5);
+    gra.endPoint = CGPointMake(1, 0.5);
+    
+    CABasicAnimation * ba = [CABasicAnimation animationWithKeyPath:@"locations"];
+    ba.fromValue = @[@0,@0,@0.25];
+    ba.toValue = @[@0.75,@1,@1];
+    ba.duration = 2.5;
+    ba.repeatCount = HUGE;
+    [gra addAnimation:ba forKey:nil];
+    
+    UILabel *unlock = [[UILabel alloc] initWithFrame:gra.bounds];
+    // 必需要强引用保存unlock，此句也可以用[self.view addSubview:unlock]来替代;
+    self.unlock = unlock;
+    unlock.alpha = 0.5;
+    unlock.text = @"滑动来解锁 >>";
+    unlock.textAlignment = NSTextAlignmentCenter;
+    unlock.font = [UIFont boldSystemFontOfSize:16];
+    gra.mask = unlock.layer;
+}
 @end
+
+
 
 @implementation MyBezierView
 
