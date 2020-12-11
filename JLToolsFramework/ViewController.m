@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "JLMoveViewController.h"
 #import "JLBezierViewController.h"
+#import "JLToolsFramework-Swift.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView * myTableView;
@@ -64,7 +65,7 @@
 }
 
 - (void)loadData {
-    self.dataArray = @[[JLMoveViewController class],[JLBezierViewController class]];
+    self.dataArray = @[[JLMoveViewController class],[JLBezierViewController class],[JLRecorderViewController class]];
     [self.myTableView reloadData];
 }
 
