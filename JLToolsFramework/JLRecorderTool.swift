@@ -117,12 +117,15 @@ class JLRecorderTool: NSObject,AVAudioRecorderDelegate {
     
     //停止
     func stop() {
-        self.recorder?.stop()
+        if self.recorder?.isRecording == true {
+            self.recorder?.stop();
+        }
         self.timer?.invalidate()
         self.timer = nil;
         self.recorderImageView.removeFromSuperview()
     }
     
+    //删除文件
     func deleteFile() {
         self.currentTime = 0
         do {
@@ -163,6 +166,7 @@ func getSetting() -> [String:Any] {
     ]
 }
 
+//MARK: 获取权限
 func ckeckRecorderAutor(block: @escaping (Bool)->Void) -> Void {
     let authstatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.audio)
     switch authstatus {
