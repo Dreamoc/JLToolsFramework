@@ -306,5 +306,39 @@ class JLSwiftTestViewController: UIViewController {
         default:
             print("S")
         }
+        
+        let myInfo1: MyInfo1 = MyInfo1.init(name: "10", age: 10)
+        print(myInfo1.name)
+        
+        let myInfo2: MyInfo2 = MyInfo2.init(name: "100", age: 100)
+        print(myInfo2.name)
+
+        let myInfo3: MyInfo3 = MyInfo3.init(name: "200", age: 200)
+        print(myInfo3.name)
+    }
+}
+
+
+struct MyInfo1 {
+    var name: String
+    var age: Int
+}
+
+class MyInfo2 {
+    var name: String = ""
+    var age: Int = 0
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+class MyInfo3: NSObject {
+    var name: String
+    var age: Int
+    @objc init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+        super.init()
     }
 }
