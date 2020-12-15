@@ -13,6 +13,8 @@ protocol JLRecorderToolDelegate: NSObjectProtocol {
 }
 
 class JLRecorderTool: NSObject,AVAudioRecorderDelegate {
+    static let tool = JLRecorderTool()
+    
     
     //缓存路径
     let path: String = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).first!.appending("/tmp.aac")

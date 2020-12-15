@@ -65,8 +65,8 @@
 }
 
 - (void)loadData {
-    self.dataArray = @[[JLMoveViewController class],[JLBezierViewController class],[JLRecorderViewController class]];
-    [self.myTableView reloadData];
+    self.dataArray = @[[JLMoveViewController class],[JLBezierViewController class],[JLRecorderViewController class],[JLSwiftTestViewController class]];
+    [self.myTableView reloadData];    
 }
 
 @end
