@@ -66,7 +66,7 @@
 }
 
 - (void)loadData {
-    self.dataArray = @[[JLMoveViewController class],[JLBezierViewController class],[JLRecorderViewController class],[JLSwiftTestViewController class]];
+    self.dataArray = @[[JLMoveViewController class],[JLBezierViewController class],[JLRecorderViewController class],[JLSwiftTestViewController class],[JLModelViewController class]];
     [self.myTableView reloadData];
     MyInfo3 *info3 = [[MyInfo3 alloc]initWithName:@"400" age:400];
     
